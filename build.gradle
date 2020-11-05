@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'org.study'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+this.subprojects {
+    repositories{
+        maven {
+            url 'https://maven.aliyun.com/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'https://repo1.maven.org/maven2/'
+        }
+        mavenCentral()
+    }
+}
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/'
+    }
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+        url 'https://repo1.maven.org/maven2/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+}
