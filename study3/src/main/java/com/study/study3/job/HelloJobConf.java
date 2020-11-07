@@ -1,8 +1,11 @@
-package com.study.study2mysql.job;
+package com.study.study3.job;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.batch.core.*;
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobParametersBuilder;
+import org.springframework.batch.core.JobParametersInvalidException;
+import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -13,9 +16,9 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.batch.core.repository.support.JobRepositoryFactoryBean;
+import org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean;
 import org.springframework.batch.item.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -39,8 +42,24 @@ public class HelloJobConf {
 
     @Bean
     public String runJob(JobLauncher jobLauncher,Job helloJob) throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
-        jobLauncher.run(helloJob, new JobParametersBuilder().addDate("date", new Date()).toJobParameters());
+        jobLauncher.run(helloJob, new JobParametersBuilder().toJobParameters());
         return "";
+    }
+
+    @Bean
+    public MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean(){
+        return new MapJobRepositoryFactoryBean();
+    }
+
+    @Bean
+    public JobRepository jobRepository(MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean) {
+        JobRepository jobRepository = null;
+        try {
+            jobRepository = mapJobRepositoryFactoryBean.getObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return jobRepository;
     }
 
     @Bean
@@ -72,7 +91,7 @@ public class HelloJobConf {
     @Bean
     @Autowired
     public Job helloJob(Step step1, JobBuilderFactory jobBuilderFactory) {
-        return jobBuilderFactory.get("hello-job")
+        return jobBuilderFactory.get("job-instance-3-version")
                 .incrementer(new RunIdIncrementer())
                 .flow(step1)
                 .end()
