@@ -1,0 +1,15 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    username: springbatch
+    password: springbatch
+    url: jdbc:oracle:thin:@10.0.250.178:1521/starboss
+    driver-class-name: oracle.jdbc.OracleDriver
+    initialization-mode: never
+    schema: classpath:/org/springframework/batch/core/schema-oracle10g.sql
+  batch:
+    initialize-schema: never
+    job:
+      enabled: true
+      names: study2-oracle
