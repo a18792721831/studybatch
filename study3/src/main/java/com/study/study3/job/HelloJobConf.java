@@ -46,21 +46,21 @@ public class HelloJobConf {
         return "";
     }
 
-    @Bean
-    public MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean(){
-        return new MapJobRepositoryFactoryBean();
-    }
-
-    @Bean
-    public JobRepository jobRepository(MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean) {
-        JobRepository jobRepository = null;
-        try {
-            jobRepository = mapJobRepositoryFactoryBean.getObject();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return jobRepository;
-    }
+//    @Bean
+//    public MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean(){
+//        return new MapJobRepositoryFactoryBean();
+//    }
+//
+//    @Bean
+//    public JobRepository jobRepository(MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean) {
+//        JobRepository jobRepository = null;
+//        try {
+//            jobRepository = mapJobRepositoryFactoryBean.getObject();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return jobRepository;
+//    }
 
     @Bean
     @Autowired
