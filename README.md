@@ -8,3 +8,7 @@ study spring batch.
 
 ## 3. spring batch元数据
 ![spring batch元数据](.image/spring%20batch元数据.png)  
+
+## 4. spring batch Job详解
+![spring batch Job详解_1](.image/spring%20batch%20Job详解_1.png)  
+![spring batch Job详解_2](.image/spring%20batch%20Job详解_2.png)  
