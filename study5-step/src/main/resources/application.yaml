@@ -1,0 +1,15 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.0.228.117:13306/springbatch?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: springbatch
+    password: springbatch
+    schema: classpath:org/springframework/batch/core/schema-mysql.sql
+    initialization-mode: never
+  batch:
+    initialize-schema: never
+    job:
+      enabled: true
+      names: study5-step
