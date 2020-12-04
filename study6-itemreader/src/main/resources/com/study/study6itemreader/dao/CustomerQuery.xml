@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.study6itemreader.dao.CustomerQuery">
+    <resultMap id="cusid" type="com.study.study6itemreader.domain.CustomerIdName">
+        <id property="id" column="CUSTOMERID_PK" />
+        <result property="name" column="CUSTOMERNAMESTR" />
+    </resultMap>
+    <select id="queryCustomer" resultMap="cusid" parameterType="java.lang.Integer">
+        select cus.CUSTOMERID_PK, cus.CUSTOMERNAMESTR
+        from CUSTOMEREN cus
+        <where>
+            <if test="status != null">
+                and cus.CUSTOMERSTATUSID = #{status}
+            </if>
+        </where>
+    </select>
+</mapper>

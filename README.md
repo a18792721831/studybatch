@@ -16,3 +16,7 @@ study spring batch.
 ## 5. [spring batch Job详解](https://blog.csdn.net/a18792721831/article/details/110200113)  
 ![spring batch step详解_1](.image/spring%20batch%20step详解_1.png)  
 ![spring batch step详解_2](.image/spring%20batch%20step详解_2.png)    
+
+## 6. [spring batch ItemReader详解](https://blog.csdn.net/a18792721831/article/details/110637684)  
+![spring batch ItemReader详解](.image/spring%20batch%20ItemReader详解.png)  
+
