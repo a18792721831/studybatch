@@ -20,3 +20,6 @@ study spring batch.
 ## 6. [spring batch ItemReader详解](https://blog.csdn.net/a18792721831/article/details/110637684)  
 ![spring batch ItemReader详解](.image/spring%20batch%20ItemReader详解.png)  
 
+## 7. [spring batch item process详解](https://blog.csdn.net/a18792721831/article/details/110681958)  
+![spring batch item process详解](.image/spring%20batch%20item%20process详解.png)  
+

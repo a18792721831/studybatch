@@ -19,4 +19,4 @@ spring:
     initialize-schema: never
     job:
       enabled: true
-      names: study5-step
+      names: study6-itemreader
