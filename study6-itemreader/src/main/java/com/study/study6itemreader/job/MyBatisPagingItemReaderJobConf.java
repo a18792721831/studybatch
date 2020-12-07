@@ -82,6 +82,5 @@ public class MyBatisPagingItemReaderJobConf {
         factoryBean.setDataSource(bossDataSource);
         factoryBean.setTypeAliasesPackage("com.study.study6itemreader.domain");
         return factoryBean;
-
     }
 }

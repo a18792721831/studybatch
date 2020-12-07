@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.study8itemwriter.dao.PeopleDao">
+    <insert id="addPeople" parameterType="com.study.study8itemwriter.domain.People"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into people(id,name) values(null,#{name});
+    </insert>
+    <insert id="addPeople1" parameterType="com.study.study8itemwriter.domain.People"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into people(id,name) values(null,concat('1:',#{name}));
+    </insert>
+    <insert id="addPeople2" parameterType="com.study.study8itemwriter.domain.People"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into people(id,name) values(null,concat('2:',#{name}));
+    </insert>
+</mapper>
