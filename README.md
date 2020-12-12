@@ -26,3 +26,5 @@ study spring batch.
 ## 8. [spring batch item writer详解](https://blog.csdn.net/a18792721831/article/details/110832092)  
 ![spring batch item writer详解](.image/spring%20batch%20item%20writer详解.png)  
 
+## 9. [spring batch 作业流详解](https://blog.csdn.net/a18792721831/article/details/111083504)  
+![spring batch 作业流详解](.image/spring%20batch%20作业流详解.png)  
