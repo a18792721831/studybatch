@@ -31,3 +31,6 @@ study spring batch.
 
 ## 10. [spring batch 健壮性](https://blog.csdn.net/a18792721831/article/details/111404284)  
 ![spring batch 健壮性](.image/spring%20batch%20健壮性.png)  
+
+## 11. [spring batch 扩展性](https://blog.csdn.net/a18792721831/article/details/111408460)  
+![spring batch 扩展性](.image/spring%20batch%20扩展性.png)  
